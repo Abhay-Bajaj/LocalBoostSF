@@ -1,1 +1,4 @@
-node_modules
+backend/data/*.csv
+backend/data/*.csv
+node_modules/
+frontend/node_modules/

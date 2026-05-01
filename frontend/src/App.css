@@ -1,6 +1,3 @@
-/* =========================
-   GLOBAL COLORS
-========================= */
 :root {
     --primary-green: #2E7D32;
     --light-green: #66BB6A;
@@ -10,9 +7,6 @@
     --accent: #A5D6A7;
 }
 
-/* =========================
-   BASE STYLING
-========================= */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -20,53 +14,58 @@ body {
     color: var(--text-dark);
 }
 
-/* =========================
-   NAVBAR
-========================= */
+/* NAVBAR */
 .navbar {
     background-color: var(--primary-green);
     color: white;
-    padding: 12px 20px;
+    padding: 14px 22px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 18px;
 }
 
-.navbar h2 {
+.navbar-logo {
+    color: white;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.navbar-search {
+    flex: 1;
+}
+
+.navbar-search input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 9px 10px;
+    border-radius: 6px;
+    border: none;
     margin: 0;
 }
 
-.navbar input {
-    padding: 6px;
-    border-radius: 6px;
-    border: none;
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-/* =========================
-   CONTAINER
-========================= */
+.navbar .button {
+    background-color: white;
+    color: var(--primary-green);
+    font-weight: bold;
+}
+
+.navbar .button:hover {
+    background-color: var(--card-beige);
+}
+
+/* GENERAL */
 .container {
     padding: 20px;
 }
 
-/* =========================
-   BUSINESS CARD
-========================= */
-.business-card {
-    background-color: var(--card-beige);
-    border-radius: 10px;
-    padding: 15px;
-    margin: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.business-card h3 {
-    margin-top: 0;
-}
-
-/* =========================
-   BUTTONS
-========================= */
 .button {
     background-color: var(--primary-green);
     color: white;
@@ -80,17 +79,7 @@ body {
     background-color: var(--light-green);
 }
 
-/* =========================
-   GRID (Browse Page)
-========================= */
-.grid {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-/* =========================
-   MODAL (Login Popup)
-========================= */
+/* MODAL */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -114,10 +103,6 @@ body {
 .modal h2 {
     margin-top: 0;
     margin-bottom: 22px;
-}
-
-.modal-form {
-    width: 100%;
 }
 
 .modal input {
@@ -166,53 +151,84 @@ body {
     font-weight: bold;
 }
 
-/* =========================
-   INPUTS
-========================= */
-input {
-    width: 100%;
-    padding: 8px;
-    margin: 6px 0;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-}
-
-/* =========================
-   TABS (Signup)
-========================= */
-.tabs {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 10px;
-}
-
-.tab {
-    cursor: pointer;
-    padding: 6px 10px;
-}
-
-.active-tab {
-    border-bottom: 2px solid var(--primary-green);
-    font-weight: bold;
-}
-
-/* =========================
-   LANDING PAGE CENTERING
-========================= */
+/* LANDING */
 .landing-container {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* vertical center */
     align-items: center;
-    /* horizontal center */
     text-align: center;
 }
 
-/* buttons side by side */
 .landing-buttons {
     display: flex;
     gap: 15px;
     margin-top: 20px;
+}
+
+/* BROWSE PAGE */
+.browse-page {
+    display: flex;
+    gap: 24px;
+    padding: 30px;
+}
+
+.filter-sidebar {
+    width: 160px;
+    background-color: white;
+    border-radius: 14px;
+    padding: 18px;
+    height: fit-content;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter-sidebar h3 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+.category-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 14px 0;
+    font-size: 0.95rem;
+}
+
+.category-option input {
+    width: auto;
+    margin: 0;
+}
+
+.browse-content {
+    flex: 1;
+}
+
+.business-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 22px;
+    margin-top: 28px;
+}
+
+.business-card {
+    background-color: white;
+    border-radius: 14px;
+    padding: 18px;
+    min-height: 120px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.business-card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.business-location {
+    color: #555;
+    line-height: 1.4;
 }
