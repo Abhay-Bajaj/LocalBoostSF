@@ -107,14 +107,6 @@ function CreatePost() {
                             />
                         </label>
 
-                        <label className="checkbox-row">
-                            <input
-                                type="checkbox"
-                                checked={generateImage}
-                                onChange={(e) => setGenerateImage(e.target.checked)}
-                            />
-                            Generate an image
-                        </label>
 
                         <div className="upload-generate-row">
                             <label className="upload-button">
