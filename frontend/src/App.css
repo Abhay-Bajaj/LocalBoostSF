@@ -8,6 +8,11 @@
     --card-beige: #FFF8E1;
     --text-dark: #2C2C2C;
     --accent: #A5D6A7;
+    --surface-cream: #fffdf3;
+    --muted-green: #5e765f;
+    --soft-border: rgba(46, 125, 50, 0.16);
+    --heading-font: Georgia, "Times New Roman", serif;
+    --body-font: Arial, sans-serif;
 }
 
 /* =========================
@@ -15,9 +20,22 @@
 ========================= */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: var(--body-font);
     background-color: var(--background-beige);
     color: var(--text-dark);
+}
+
+h1,
+h2,
+h3,
+.navbar-logo {
+    font-family: var(--heading-font);
+    letter-spacing: 0;
+}
+
+h1,
+h2 {
+    color: var(--primary-green);
 }
 
 /* =========================
@@ -57,6 +75,7 @@ body {
     border-radius: 6px;
     border: none;
     margin: 0;
+    background-color: var(--surface-cream);
 }
 
 /* Right-side buttons */
@@ -82,7 +101,25 @@ body {
    CONTAINER
 ========================= */
 .container {
-    padding: 20px;
+    width: min(1100px, calc(100% - 48px));
+    margin: 28px auto;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: var(--card-beige);
+    border: 1px solid var(--soft-border);
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(46, 70, 46, 0.08);
+}
+
+.container h1 {
+    margin-top: 0;
+    font-size: 2.4rem;
+    line-height: 1.08;
+}
+
+.container p {
+    margin-bottom: 0;
+    line-height: 1.55;
 }
 
 /* =========================
@@ -90,10 +127,11 @@ body {
 ========================= */
 .business-card {
     background-color: var(--card-beige);
-    border-radius: 10px;
+    border: 1px solid var(--soft-border);
+    border-radius: 8px;
     padding: 15px;
     margin: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 24px rgba(46, 70, 46, 0.08);
 }
 
 .business-card h3 {
@@ -110,6 +148,7 @@ body {
     padding: 8px 14px;
     border-radius: 6px;
     cursor: pointer;
+    font-weight: 700;
 }
 
 .button:hover {
@@ -141,13 +180,15 @@ body {
 }
 
 .modal {
-    background: white;
+    background: var(--card-beige);
+    border: 1px solid var(--soft-border);
     padding: 28px 22px;
-    border-radius: 10px;
+    border-radius: 8px;
     width: 300px;
     text-align: center;
     position: relative;
     z-index: 11;
+    box-shadow: 0 22px 60px rgba(0, 0, 0, 0.28);
 }
 
 .modal-close-button {
@@ -172,6 +213,8 @@ body {
 .modal h2 {
     margin-top: 0;
     margin-bottom: 22px;
+    font-family: var(--heading-font);
+    color: var(--primary-green);
 }
 
 .modal-form {
@@ -232,7 +275,9 @@ input {
     padding: 8px;
     margin: 6px 0;
     border-radius: 6px;
-    border: 1px solid #ccc;
+    border: 1px solid rgba(46, 125, 50, 0.28);
+    background-color: var(--surface-cream);
+    color: var(--text-dark);
 }
 
 /* =========================
@@ -268,7 +313,7 @@ input {
     padding: 24px;
     box-sizing: border-box;
     background-color: var(--background-beige);
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: var(--heading-font);
 }
 
 .landing-container::before {
@@ -323,7 +368,7 @@ input {
 .landing-card p {
     margin: 16px auto 28px;
     max-width: 430px;
-    font-family: Arial, sans-serif;
+    font-family: var(--body-font);
     font-size: 1.05rem;
     line-height: 1.5;
 }
@@ -339,7 +384,7 @@ input {
     margin: 0;
     min-width: 0;
     flex: 1;
-    background-color: #fffdf3;
+    background-color: var(--surface-cream);
     border: 1px solid rgba(46, 125, 50, 0.28);
 }
 
@@ -383,7 +428,7 @@ input {
 ========================= */
 .general-dashboard {
     padding: 28px;
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: var(--heading-font);
 }
 
 .dashboard-hero {
@@ -412,7 +457,7 @@ input {
 .dashboard-search-panel p,
 .dashboard-post-card p,
 .saved-business-card p {
-    font-family: Arial, sans-serif;
+    font-family: var(--body-font);
 }
 
 .dashboard-hero p {
@@ -424,8 +469,8 @@ input {
 .dashboard-eyebrow,
 .dashboard-card-label {
     margin: 0 0 8px;
-    color: #5e765f;
-    font-family: Arial, sans-serif;
+    color: var(--muted-green);
+    font-family: var(--body-font);
     font-size: 0.78rem;
     font-weight: 700;
     letter-spacing: 0;
@@ -437,7 +482,7 @@ input {
     grid-template-columns: minmax(220px, 0.8fr) minmax(280px, 1.2fr);
     gap: 18px;
     align-items: center;
-    background-color: #fffdf3;
+    background-color: var(--surface-cream);
     border: 1px solid rgba(46, 125, 50, 0.14);
     border-radius: 8px;
     padding: 22px;
@@ -489,7 +534,7 @@ input {
 
 .dashboard-post-card,
 .saved-business-card {
-    background-color: #fffdf3;
+    background-color: var(--surface-cream);
     border: 1px solid rgba(46, 125, 50, 0.12);
     border-radius: 8px;
     padding: 18px;
@@ -511,7 +556,7 @@ input {
     flex-wrap: wrap;
     gap: 12px;
     margin-top: 16px;
-    font-family: Arial, sans-serif;
+    font-family: var(--body-font);
     font-size: 0.9rem;
 }
 
@@ -542,8 +587,8 @@ input {
 }
 
 .saved-business-card span {
-    color: #5e765f;
-    font-family: Arial, sans-serif;
+    color: var(--muted-green);
+    font-family: var(--body-font);
     font-size: 0.9rem;
 }
 
@@ -575,26 +620,30 @@ input {
 
 
 .browse-page {
-    display: flex;
+    display: grid;
+    grid-template-columns: 190px minmax(0, 1fr);
     gap: 24px;
-    padding: 30px;
+    width: min(1180px, calc(100% - 48px));
+    margin: 28px auto;
+    padding: 0;
 }
 
 .filter-sidebar {
-    width: 160px;
-    background-color: white;
-    border-radius: 14px;
+    background-color: var(--card-beige);
+    border: 1px solid var(--soft-border);
+    border-radius: 8px;
     padding: 18px;
     height: fit-content;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 24px rgba(46, 70, 46, 0.08);
 }
 
 .filter-sidebar h3 {
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 0;
     font-size: 0.85rem;
     margin-top: 0;
     margin-bottom: 18px;
+    color: var(--primary-green);
 }
 
 .category-option {
@@ -614,6 +663,16 @@ input {
     flex: 1;
 }
 
+.browse-content h1 {
+    margin-top: 0;
+    font-size: 2.6rem;
+    line-height: 1.08;
+}
+
+.browse-content > p {
+    line-height: 1.55;
+}
+
 .business-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -622,11 +681,12 @@ input {
 }
 
 .business-card {
-    background-color: white;
-    border-radius: 14px;
+    background-color: var(--card-beige);
+    border: 1px solid var(--soft-border);
+    border-radius: 8px;
     padding: 18px;
     min-height: 120px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 24px rgba(46, 70, 46, 0.08);
 }
 
 .business-card h3 {
@@ -635,6 +695,28 @@ input {
 }
 
 .business-location {
-    color: #555;
+    color: var(--muted-green);
     line-height: 1.4;
+}
+
+@media (max-width: 820px) {
+    .navbar {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .navbar-actions {
+        flex-wrap: wrap;
+    }
+
+    .browse-page {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    .container,
+    .browse-page {
+        width: min(100% - 32px, 1180px);
+    }
 }
