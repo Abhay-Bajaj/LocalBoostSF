@@ -23,23 +23,59 @@ body {
 /* =========================
    NAVBAR
 ========================= */
+/* =========================
+   NAVBAR (UPDATED)
+========================= */
 .navbar {
     background-color: var(--primary-green);
     color: white;
-    padding: 12px 20px;
+    padding: 14px 22px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 18px;
 }
 
-.navbar h2 {
+/* Logo */
+.navbar-logo {
+    color: white;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Search container */
+.navbar-search {
+    flex: 1;
+}
+
+/* Search input */
+.navbar-search input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 9px 10px;
+    border-radius: 6px;
+    border: none;
     margin: 0;
 }
 
-.navbar input {
-    padding: 6px;
-    border-radius: 6px;
-    border: none;
+/* Right-side buttons */
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Navbar buttons override */
+.navbar .button {
+    background-color: white;
+    color: var(--primary-green);
+    font-weight: bold;
+}
+
+/* Hover */
+.navbar .button:hover {
+    background-color: var(--card-beige);
 }
 
 /* =========================
@@ -535,4 +571,70 @@ input {
         align-items: flex-start;
         flex-direction: column;
     }
+}
+
+
+.browse-page {
+    display: flex;
+    gap: 24px;
+    padding: 30px;
+}
+
+.filter-sidebar {
+    width: 160px;
+    background-color: white;
+    border-radius: 14px;
+    padding: 18px;
+    height: fit-content;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter-sidebar h3 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+.category-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 14px 0;
+    font-size: 0.95rem;
+}
+
+.category-option input {
+    width: auto;
+    margin: 0;
+}
+
+.browse-content {
+    flex: 1;
+}
+
+.business-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 22px;
+    margin-top: 28px;
+}
+
+.business-card {
+    background-color: white;
+    border-radius: 14px;
+    padding: 18px;
+    min-height: 120px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.business-card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.business-location {
+    color: #555;
+    line-height: 1.4;
 }
