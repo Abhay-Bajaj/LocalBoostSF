@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import LoginModal from "../components/LoginModal";
+import GeneralUserDashboard from "./GeneralUserDashboard";
 
 function Dashboard() {
     const [showLogin, setShowLogin] = useState(false);
@@ -9,10 +10,7 @@ function Dashboard() {
         <>
             <Navbar onLoginClick={() => setShowLogin(true)} />
 
-            <div className="container">
-                <h1>Dashboard</h1>
-                <p>Your saved businesses, posts, and account information will appear here.</p>
-            </div>
+            <GeneralUserDashboard />
 
             {showLogin && <LoginModal onClose={() => setShowLogin(false)} />}
         </>

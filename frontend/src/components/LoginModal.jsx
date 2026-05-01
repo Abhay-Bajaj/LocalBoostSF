@@ -7,6 +7,15 @@ function LoginModal({ onClose }) {
     return (
         <div className="modal-overlay" onClick={onClose}>
             <div className="modal" onClick={(e) => e.stopPropagation()}>
+                <button
+                    className="modal-close-button"
+                    type="button"
+                    onClick={onClose}
+                    aria-label="Close login modal"
+                >
+                    x
+                </button>
+
                 {mode === "login" ? (
                     <>
                         <h2>Login</h2>
