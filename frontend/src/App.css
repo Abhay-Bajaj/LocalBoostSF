@@ -1,0 +1,218 @@
+/* =========================
+   GLOBAL COLORS
+========================= */
+:root {
+    --primary-green: #2E7D32;
+    --light-green: #66BB6A;
+    --background-beige: #F5F5DC;
+    --card-beige: #FFF8E1;
+    --text-dark: #2C2C2C;
+    --accent: #A5D6A7;
+}
+
+/* =========================
+   BASE STYLING
+========================= */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-beige);
+    color: var(--text-dark);
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+    background-color: var(--primary-green);
+    color: white;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h2 {
+    margin: 0;
+}
+
+.navbar input {
+    padding: 6px;
+    border-radius: 6px;
+    border: none;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+    padding: 20px;
+}
+
+/* =========================
+   BUSINESS CARD
+========================= */
+.business-card {
+    background-color: var(--card-beige);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.business-card h3 {
+    margin-top: 0;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.button {
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--light-green);
+}
+
+/* =========================
+   GRID (Browse Page)
+========================= */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* =========================
+   MODAL (Login Popup)
+========================= */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    background: white;
+    padding: 28px 22px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.modal h2 {
+    margin-top: 0;
+    margin-bottom: 22px;
+}
+
+.modal-form {
+    width: 100%;
+}
+
+.modal input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 7px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.modal .button {
+    margin-top: 8px;
+}
+
+.secondary-button {
+    margin-top: 18px;
+    background: none;
+    border: none;
+    color: var(--primary-green);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.secondary-button:hover {
+    text-decoration: underline;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    gap: 12px;
+}
+
+.tab {
+    cursor: pointer;
+    padding: 6px 8px;
+    flex: 1;
+    text-align: center;
+}
+
+.active-tab {
+    border-bottom: 2px solid var(--primary-green);
+    font-weight: bold;
+}
+
+/* =========================
+   INPUTS
+========================= */
+input {
+    width: 100%;
+    padding: 8px;
+    margin: 6px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* =========================
+   TABS (Signup)
+========================= */
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.tab {
+    cursor: pointer;
+    padding: 6px 10px;
+}
+
+.active-tab {
+    border-bottom: 2px solid var(--primary-green);
+    font-weight: bold;
+}
+
+/* =========================
+   LANDING PAGE CENTERING
+========================= */
+.landing-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* vertical center */
+    align-items: center;
+    /* horizontal center */
+    text-align: center;
+}
+
+/* buttons side by side */
+.landing-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
