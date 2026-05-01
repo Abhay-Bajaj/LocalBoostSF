@@ -10,14 +10,6 @@ CREATE TABLE IF NOT EXISTS businesses (
     name TEXT NOT NULL,
     category TEXT,
     address TEXT,
-    phone TEXT,
-    email TEXT,
-    description TEXT,
-    followers INTEGER DEFAULT 0,
-    monthly_reach INTEGER DEFAULT 0,
-    rating REAL DEFAULT 0,
-    review_count INTEGER DEFAULT 0,
-    hours TEXT,
     account_number INTEGER DEFAULT 0,
     created_at TEXT DEFAULT CURRENT_TIMESTAMP
 );
@@ -42,8 +34,6 @@ CREATE TABLE IF NOT EXISTS posts (
     image_path TEXT,
     date TEXT,
     views INTEGER DEFAULT 0,
-    likes INTEGER DEFAULT 0,
-    comments INTEGER DEFAULT 0,
     saves INTEGER DEFAULT 0,
     engagement_rate REAL DEFAULT 0,
     created_at TEXT DEFAULT CURRENT_TIMESTAMP,
